@@ -1,0 +1,12 @@
+<div class="container">
+  <app-barra-status [totalItems]="getTotalItems() | async" [totalValue]="getTotalValue() | async"></app-barra-status>
+  <div class="items">
+    <div class="category" *ngFor="let categoria of categories | async">
+      <div class="category-title">{{categoria}}</div>
+      <div class="item" *ngFor="let item of getItemsFromCategory(categoria) | async" (click)="addToCart(item)">
+        <div class="description">{{item.descricao}}</div>
+        <div class="price">{{item.preco | currency:"R$ "}}</div>
+      </div>
+    </div>
+  </div>
+</div>

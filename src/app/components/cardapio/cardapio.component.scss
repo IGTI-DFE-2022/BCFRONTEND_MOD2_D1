@@ -1,0 +1,32 @@
+.container {
+  margin-top: 1rem;
+}
+
+.items {
+  margin-top: 1rem;
+}
+
+.category {
+  margin: 1rem;
+}
+
+.category-title {
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: hsl(0, 0, 85%);
+}
+
+.item {
+  padding: 0.3rem 1rem;
+  background-color: hsl(0, 0, 98%);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &:hover {
+    font-weight: bold;
+    background-color: hsl(0, 0, 93%);
+  }
+}

@@ -1,0 +1,26 @@
+.container {
+  min-width: 24rem;
+}
+
+.items {
+  margin-top: 1rem;
+}
+
+.item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.no-items {
+  margin: 1rem;
+}
+
+.total {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  font-weight: bold;
+  margin-top: 1rem;
+}

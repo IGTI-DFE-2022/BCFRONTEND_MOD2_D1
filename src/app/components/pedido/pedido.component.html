@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="items" *ngIf="(getItems() | async)">
+    <div class="item" *ngFor="let c of getItems() | async">
+      <div class="description">{{c.item.descricao}}</div>
+      <div class="value">
+        <span>{{c.quantity}}</span>x
+        <span>{{c.item.preco | currency:"R$ "}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-items" *ngIf="totalItems == 0">
+    Sem itens no carrinho
+  </div>
+
+  <div class="total">
+    {{getTotalValue() | async | currency: "R$ "}}
+  </div>
+</div>
